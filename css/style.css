@@ -90,6 +90,11 @@ ul {
     margin-bottom: 8px;
 }
 
+.section-label.center {
+    font-size: 1.5rem;
+    letter-spacing: 0.18em;
+}
+
 .section-title {
     font-size: 2.25rem;
     font-weight: 900;
