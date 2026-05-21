@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Olivia | Babysitting & Pet Care in Highland Meadows</title>
+    <meta name="description" content="Reliable babysitting, mother's helper, dog walking, and pet sitting services in Highland Meadows.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== NAVIGATION ===================== -->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-icon">🌸</span>
+                <span>Schedule Olivia</span>
+            </a>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#availability">Availability</a></li>
+                <li><a href="#book" class="btn btn-primary">Book Me</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="container hero-content">
+            <div class="hero-badge">📍 Serving Highland Meadows</div>
+            <h1 class="hero-title">Hi, I'm Olivia! <span class="wave">👋</span></h1>
+            <p class="hero-subtitle">Your reliable neighborhood babysitter &amp; pet caretaker. I love kids and animals — let me help your family!</p>
+            <div class="hero-actions">
+                <a href="#book" class="btn btn-primary btn-lg">Book Me Now</a>
+                <a href="#services" class="btn btn-outline btn-lg">See Services</a>
+            </div>
+            <div class="hero-tags">
+                <span class="hero-tag">🍼 Babysitting</span>
+                <span class="hero-tag">🤝 Mother's Helper</span>
+                <span class="hero-tag">🐕 Dog Walking</span>
+                <span class="hero-tag">🐾 Pet Sitting</span>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="section about" id="about">
+        <div class="container about-grid">
+            <div class="about-photo-wrap">
+                <img src="images/olivia.jpeg" alt="Olivia" class="about-photo">
+            </div>
+            <div class="about-content">
+                <div class="section-label">About Me</div>
+                <h2 class="section-title">Nice to meet you!</h2>
+                <!-- UPDATE THIS BIO WITH YOUR OWN WORDS -->
+                <p class="about-bio">
+                    Hi! I'm Olivia, a responsible and caring 12-year-old in Highland Meadows.
+                    I have a true passion for taking care of kids and animals. I'm trustworthy,
+                    punctual, and will treat your family and pets like my own!
+                </p>
+                <div class="about-badges">
+                    <div class="badge">📍 Highland Meadows</div>
+                    <div class="badge">⭐ Responsible &amp; Caring</div>
+                    <div class="badge">🐾 Animal Lover</div>
+                </div>
+                <div class="pets-section">
+                    <p class="pets-title">Pets I care for:</p>
+                    <div class="pet-tags">
+                        <span class="pet-tag">🐕 Dogs</span>
+                        <span class="pet-tag">🐈 Cats</span>
+                        <span class="pet-tag">🐟 Fish</span>
+                        <span class="pet-tag">🐹 Hamsters &amp; Guinea Pigs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== SERVICES & PRICING ===================== -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-label center">What I Offer</div>
+            <h2 class="section-title center">Services &amp; Pricing</h2>
+            <p class="section-sub center">All services available in Highland Meadows</p>
+            <div class="services-grid">
+
+                <!-- UPDATE PRICES HERE if needed -->
+                <div class="service-card">
+                    <div class="service-icon">🍼</div>
+                    <h3>Babysitting</h3>
+                    <p>Safe and fun care for your little ones. I'll keep them entertained, fed, and happy while you're away.</p>
+                    <div class="service-footer">
+                        <div class="service-price">$12 <span>/ hour</span></div>
+                        <div class="service-note">Rate may increase for multiple children</div>
+                        <button type="button" class="btn btn-primary btn-sm svc-book-btn" data-svc="Babysitting">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🤝</div>
+                    <h3>Mother's Helper</h3>
+                    <p>I'll help with the kids and light tasks while you're home. Great when you just need an extra pair of hands!</p>
+                    <div class="service-footer">
+                        <div class="service-price">$10 <span>/ hour</span></div>
+                        <div class="service-note">Parent is present at home</div>
+                        <button type="button" class="btn btn-primary btn-sm svc-book-btn" data-svc="Mothers Helper">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🐾</div>
+                    <h3>Pet Sitting</h3>
+                    <p>I'll visit your home to feed, water, and spend quality time with your pets while you're away.</p>
+                    <div class="service-footer">
+                        <div class="service-price">$10 <span>/ visit</span></div>
+                        <div class="service-note">Max 3 visits per day. Includes feeding &amp; playtime</div>
+                        <button type="button" class="btn btn-primary btn-sm svc-book-btn" data-svc="Pet Sitting">Book Now</button>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🐕</div>
+                    <h3>Dog Walking</h3>
+                    <p>I'll take your pup for a fun walk around the neighborhood. Exercise and fresh air guaranteed!</p>
+                    <div class="service-footer">
+                        <div class="service-price">$5 <span>/ walk</span></div>
+                        <div class="service-note">~30 minute walk</div>
+                        <button type="button" class="btn btn-primary btn-sm svc-book-btn" data-svc="Dog Walking">Book Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== AVAILABILITY ===================== -->
+    <section class="section availability" id="availability">
+        <div class="container">
+            <div class="section-label center">When I'm Free</div>
+            <h2 class="section-title center">Check My Availability</h2>
+            <p class="section-sub center">Start by choosing the service you need:</p>
+
+            <!-- Step 1: Service Picker -->
+            <div class="svc-picker" id="svc-picker">
+                <button class="svc-btn" type="button" data-svc="Babysitting">
+                    <span class="svc-btn-icon">🍼</span>
+                    <span class="svc-btn-label">Babysitting</span>
+                </button>
+                <button class="svc-btn" type="button" data-svc="Mothers Helper">
+                    <span class="svc-btn-icon">🤝</span>
+                    <span class="svc-btn-label">Mother's Helper</span>
+                </button>
+                <button class="svc-btn" type="button" data-svc="Pet Sitting">
+                    <span class="svc-btn-icon">🐾</span>
+                    <span class="svc-btn-label">Pet Sitting</span>
+                </button>
+                <button class="svc-btn" type="button" data-svc="Dog Walking">
+                    <span class="svc-btn-icon">🐕</span>
+                    <span class="svc-btn-label">Dog Walking</span>
+                </button>
+            </div>
+
+            <!-- Calendar area (appears after service is selected) -->
+            <div class="cal-area" id="cal-area" hidden>
+
+                <!-- Prompt text (changes with each step) -->
+                <div class="cal-prompt" id="cal-prompt"></div>
+
+                <!-- Month view calendar -->
+                <div class="cal-widget" id="cal-month-view">
+                    <div class="cal-header">
+                        <button class="cal-nav-btn" id="cal-prev" type="button" aria-label="Previous month">&#8249;</button>
+                        <span class="cal-month-title" id="cal-month-title"></span>
+                        <button class="cal-nav-btn" id="cal-next" type="button" aria-label="Next month">&#8250;</button>
+                    </div>
+                    <div class="cal-dow">
+                        <span>Sun</span><span>Mon</span><span>Tue</span><span>Wed</span>
+                        <span>Thu</span><span>Fri</span><span>Sat</span>
+                    </div>
+                    <div class="cal-days" id="cal-days"></div>
+                </div>
+
+                <!-- Day time-slot view (appears for dog walking / babysitting / mother's helper) -->
+                <div class="cal-widget" id="cal-time-view" hidden>
+                    <div class="cal-time-header">
+                        <button class="cal-back-btn" id="cal-back" type="button">&#8592; Back to calendar</button>
+                        <span class="cal-day-title" id="cal-day-title"></span>
+                    </div>
+                    <div class="cal-time-slots" id="cal-time-slots"></div>
+                </div>
+
+                <!-- Legend -->
+                <div class="cal-legend" id="cal-legend">
+                    <span><span class="cal-legend-dot available"></span> Available</span>
+                    <span><span class="cal-legend-dot busy"></span> Busy</span>
+                </div>
+
+                <!-- Selection summary -->
+                <div class="cal-selection" id="cal-selection" hidden></div>
+
+                <div class="cal-loader" id="cal-loader" hidden>
+                    <div class="cal-spinner"></div> Loading...
+                </div>
+                <div class="cal-setup-note" id="cal-setup-note" hidden></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== BOOKING FORM ===================== -->
+    <section class="section book" id="book">
+        <div class="container">
+            <div class="section-label center">Let's Make It Official</div>
+            <h2 class="section-title center">Book Me!</h2>
+            <p class="section-sub center">Fill this out and I'll text you to confirm. Fields marked with <span style="color:#7C3AED">*</span> are required.</p>
+
+            <div class="form-wrap">
+                <!--
+                    HOW TO SET UP THE CONTACT FORM (takes about 5 minutes — ask a parent for help!):
+                    1. Go to https://formspree.io in your browser
+                    2. Click "Get Started" and create a free account
+                    3. Click "New Form", give it a name like "Schedule Olivia Bookings"
+                    4. Enter oliviareese1013@gmail.com as the email address
+                    5. Copy your Form ID — it looks like: xpwzkvbo
+                    6. Replace YOUR_FORM_ID below with your actual Form ID
+                       Example: action="https://formspree.io/f/xpwzkvbo"
+                -->
+                <form id="booking-form" action="https://formspree.io/f/xredpoen" method="POST" novalidate>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required autocomplete="tel">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">Home Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" placeholder="123 Oak Lane, Highland Meadows" required autocomplete="street-address">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Needed <span class="required">*</span></label>
+                        <select id="service" name="service" required>
+                            <option value="" disabled selected>Select a service...</option>
+                            <option value="Babysitting">🍼 Babysitting</option>
+                            <option value="Mothers Helper">🤝 Mother's Helper</option>
+                            <option value="Dog Walking">🐕 Dog Walking</option>
+                            <option value="Pet Sitting">🐾 Pet Sitting</option>
+                        </select>
+                    </div>
+
+                    <!-- Date/time fields — shown/hidden based on service -->
+                    <!-- Dog Walking: date + time -->
+                    <div class="form-row" id="fg-dw" hidden>
+                        <div class="form-group">
+                            <label for="dw-date">Date <span class="required">*</span></label>
+                            <input type="date" id="dw-date" name="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="dw-time">Time <span class="required">*</span></label>
+                            <input type="time" id="dw-time" name="time">
+                        </div>
+                    </div>
+
+                    <!-- Pet Sitting: start date + end date -->
+                    <div class="form-row" id="fg-ps" hidden>
+                        <div class="form-group">
+                            <label for="ps-start">Start Date <span class="required">*</span></label>
+                            <input type="date" id="ps-start" name="start_date">
+                        </div>
+                        <div class="form-group">
+                            <label for="ps-end">End Date <span class="required">*</span></label>
+                            <input type="date" id="ps-end" name="end_date">
+                        </div>
+                    </div>
+
+                    <!-- Babysitting / Mother's Helper: date + start time + end time -->
+                    <div id="fg-bs" hidden>
+                        <div class="form-group">
+                            <label for="bs-date">Date <span class="required">*</span></label>
+                            <input type="date" id="bs-date" name="date">
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="bs-start">Start Time <span class="required">*</span></label>
+                                <input type="time" id="bs-start" name="start_time">
+                            </div>
+                            <div class="form-group">
+                                <label for="bs-end">End Time <span class="required">*</span></label>
+                                <input type="time" id="bs-end" name="end_time">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Notes or Comments <span class="optional">(optional)</span></label>
+                        <textarea id="notes" name="notes" rows="4"
+                            placeholder="Any special instructions, pet names, number of kids, allergies, or anything else I should know..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg btn-full" id="submit-btn">
+                        <span id="btn-text">Send Booking Request ✉️</span>
+                        <span id="btn-loading" hidden>Sending...</span>
+                    </button>
+
+                    <div id="form-success" class="form-message success" hidden>
+                        🎉 <strong>Request sent!</strong> I'll text you soon to confirm. Thank you!
+                    </div>
+                    <div id="form-error" class="form-message error" hidden>
+                        😕 Something went wrong. Please try again or email me at
+                        <a href="mailto:oliviareese1013@gmail.com">oliviareese1013@gmail.com</a>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-logo">🌸 Schedule Olivia</div>
+            <p class="footer-tagline">Babysitting &amp; Pet Care in Highland Meadows</p>
+            <nav class="footer-links">
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#availability">Availability</a>
+                <a href="#book">Book Me</a>
+            </nav>
+            <p class="footer-email">
+                📧 <a href="mailto:oliviareese1013@gmail.com">oliviareese1013@gmail.com</a>
+            </p>
+            <p class="footer-copy">&copy; 2026 Schedule Olivia. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
