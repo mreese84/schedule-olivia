@@ -23,7 +23,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#availability">Availability</a></li>
-                <li><a href="#book" class="btn btn-primary">Book Me</a></li>
+                <li><a href="#availability" class="btn btn-primary">Book Me</a></li>
             </ul>
             <button class="nav-toggle" id="nav-toggle" aria-label="Open menu">
                 <span></span>
@@ -222,8 +222,18 @@
             <p class="section-sub center">Fill this out and I'll text you to confirm. Fields marked with <span style="color:#7C3AED">*</span> are required.</p>
 
             <div class="form-wrap">
+
+                <!-- Overlay: encourages users to check availability first -->
+                <div class="form-lock-overlay" id="form-lock-overlay">
+                    <div class="form-lock-msg">
+                        <span class="form-lock-icon">📅</span>
+                        <p><strong>Check my availability first!</strong></p>
+                        <p>Use the calendar above to pick your date &amp; time, then the form will unlock automatically.</p>
+                        <a href="#availability" class="btn btn-primary">Check Availability</a>
+                    </div>
+                </div>
                 
-                <form id="booking-form" action="https://formspree.io/f/xredpoen" method="POST" novalidate>
+                <form id="booking-form" action="https://formspree.io/f/xredpoen" method="POST" novalidate class="form-locked">
 
                     <div class="form-row">
                         <div class="form-group">

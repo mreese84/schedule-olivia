@@ -829,6 +829,58 @@ ul {
     padding: 40px 44px;
     box-shadow: var(--shadow);
     border: 1px solid var(--border);
+    position: relative;
+}
+
+/* --- Form lock overlay --- */
+.form-lock-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+    background: rgba(250, 250, 250, 0.88);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border-radius: var(--radius-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+}
+
+.form-lock-msg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-lock-icon {
+    font-size: 2.5rem;
+}
+
+.form-lock-msg p {
+    margin: 0;
+    color: var(--text-mid);
+    font-size: 0.95rem;
+    max-width: 320px;
+}
+
+.form-lock-msg p strong {
+    color: var(--text-dark);
+    font-size: 1.1rem;
+}
+
+.form-lock-msg .btn {
+    margin-top: 8px;
+}
+
+.form-locked {
+    pointer-events: none;
+}
+
+.form-lock-overlay[hidden] {
+    display: none !important;
 }
 
 .form-row {

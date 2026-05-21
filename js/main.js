@@ -598,6 +598,14 @@ function showSummary(text) {
     $selection.textContent = text;
     $selection.hidden = false;
     setPrompt('✅ Selection complete — fill out the form below!');
+    unlockForm();
+}
+
+function unlockForm() {
+    var overlay = document.getElementById('form-lock-overlay');
+    var bookingForm = document.getElementById('booking-form');
+    if (overlay) overlay.hidden = true;
+    if (bookingForm) bookingForm.classList.remove('form-locked');
 }
 
 function scrollToForm() {
