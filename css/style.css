@@ -204,6 +204,9 @@ ul {
     color: var(--text-dark);
     transition: var(--transition);
 }
+.nav-links a.btn-primary {
+    color: var(--white);
+}
 .nav-links a:not(.btn):hover {
     color: var(--purple);
 }
@@ -467,7 +470,7 @@ ul {
 
 .service-note {
     font-size: 0.78rem;
-    color: var(--text-light);
+    color: var(--text-mid);
     margin-top: 4px;
     min-height: 2.7rem;
 }
