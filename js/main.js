@@ -120,7 +120,7 @@ if (form) {
         msgSuccess.hidden  = true;
         msgError.hidden    = true;
 
-        // ---- Set email subject with current date & time ----
+        // ---- Set email subject with name, date & time ----
         var now = new Date();
         var subjectDate = (now.getMonth() + 1) + '/' + now.getDate();
         var hours = now.getHours();
@@ -128,8 +128,9 @@ if (form) {
         var ampm = hours >= 12 ? 'PM' : 'AM';
         hours = hours % 12 || 12;
         var subjectTime = hours + ':' + minutes + ' ' + ampm;
+        var submitterName = (document.getElementById('name').value || '').trim() || 'Someone';
         document.getElementById('form-subject').value =
-            'New submission from Schedule Olivia Request on ' + subjectDate + ' at ' + subjectTime;
+            submitterName + ' submitted a Schedule Olivia request on ' + subjectDate + ' at ' + subjectTime;
 
         // ---- Submit to Formspree ----
         try {
