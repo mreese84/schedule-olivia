@@ -78,6 +78,7 @@
                         <span class="pet-tag">🐕 Dogs</span>
                         <span class="pet-tag">🐈 Cats</span>
                         <span class="pet-tag">🐟 Fish</span>
+                        <span class="pet-tag">🐰 Bunnies</span>
                         <span class="pet-tag">🐹 Hamsters &amp; Guinea Pigs</span>
                     </div>
                 </div>
@@ -121,7 +122,7 @@
                     <p>I'll visit your home to feed, water, and spend quality time with your pets while you're away.</p>
                     <div class="service-footer">
                         <div class="service-price">$10 <span>/ visit</span></div>
-                        <div class="service-note">Max 3 visits per day. Includes feeding &amp; playtime</div>
+                        <div class="service-note">Max 3 visits per day. Includes feeding &amp; playtime.</div>
                         <button type="button" class="btn btn-primary btn-sm svc-book-btn" data-svc="Pet Sitting">Book Now</button>
                     </div>
                 </div>
@@ -132,7 +133,7 @@
                     <p>I'll take your pup for a fun walk around the neighborhood. Exercise and fresh air guaranteed!</p>
                     <div class="service-footer">
                         <div class="service-price">$5 <span>/ walk</span></div>
-                        <div class="service-note">~30 minute walk. Discounts apply for recurring bookings.</div>
+                        <div class="service-note">~30min walk. Recurring visits can be set up after the first walk!</div>
                         <button type="button" class="btn btn-primary btn-sm svc-book-btn" data-svc="Dog Walking">Book Now</button>
                     </div>
                 </div>
@@ -234,6 +235,7 @@
                 </div>
                 
                 <form id="booking-form" action="https://formspree.io/f/xredpoen" method="POST" novalidate class="form-locked">
+                    <input type="hidden" name="_subject" id="form-subject" value="New submission from Schedule Olivia Request">
 
                     <div class="form-row">
                         <div class="form-group">

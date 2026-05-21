@@ -120,6 +120,17 @@ if (form) {
         msgSuccess.hidden  = true;
         msgError.hidden    = true;
 
+        // ---- Set email subject with current date & time ----
+        var now = new Date();
+        var subjectDate = (now.getMonth() + 1) + '/' + now.getDate();
+        var hours = now.getHours();
+        var minutes = String(now.getMinutes()).padStart(2, '0');
+        var ampm = hours >= 12 ? 'PM' : 'AM';
+        hours = hours % 12 || 12;
+        var subjectTime = hours + ':' + minutes + ' ' + ampm;
+        document.getElementById('form-subject').value =
+            'New submission from Schedule Olivia Request on ' + subjectDate + ' at ' + subjectTime;
+
         // ---- Submit to Formspree ----
         try {
             var response = await fetch(form.action, {
