@@ -330,6 +330,9 @@ function renderMonth() {
     $days.innerHTML = '';
 
     var today     = new Date(); today.setHours(0,0,0,0);
+    var now       = new Date();
+    var cutoffMinutes = now.getHours() * 60 + now.getMinutes() + 120; // 2-hour lead time
+    var lastSlotMinutes = (END_HOUR - 1) * 60 + 30; // last slot of the day
     var firstDay  = new Date(cal.year, cal.month, 1);
     var lastDay   = new Date(cal.year, cal.month + 1, 0);
 
@@ -344,7 +347,7 @@ function renderMonth() {
         var cellDate = new Date(cal.year, cal.month, d);
         var ds = fmtDate(cal.year, cal.month + 1, d);
 
-        var isPast  = cellDate < today;
+        var isPast  = cellDate < today || (sameDay(cellDate, today) && cutoffMinutes > lastSlotMinutes);
         var isToday = sameDay(cellDate, today);
         var isBusy  = cal.busyDays.has(ds);
         var isAvail = !isPast && !isBusy;
@@ -454,6 +457,7 @@ function renderTimeSlots(ds, mode) {
 
     var now = new Date();
     var isToday = ds === dateStr(now);
+    var cutoffMinutes = now.getHours() * 60 + now.getMinutes() + 120; // 2-hour lead time
 
     // For range-end mode, find the first busy slot after the start time
     // so we can cap the selectable end times before that busy block
@@ -475,7 +479,7 @@ function renderTimeSlots(ds, mode) {
     for (var h = START_HOUR; h < END_HOUR; h++) {
         for (var m = 0; m < 60; m += 30) {
             var slotKey = ds + ' ' + pad2(h) + ':' + pad2(m);
-            var isPast  = isToday && (h < now.getHours() || (h === now.getHours() && m <= now.getMinutes()));
+            var isPast  = isToday && (h * 60 + m) < cutoffMinutes;
             var isBusy  = cal.busySlots.has(slotKey);
 
             var btn = document.createElement('button');
