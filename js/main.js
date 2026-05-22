@@ -166,7 +166,7 @@ if (form) {
 var MONTHS = ['January','February','March','April','May','June',
               'July','August','September','October','November','December'];
 var DOW_SHORT = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-var START_HOUR = 7;
+var START_HOUR = 6;
 var END_HOUR   = 23;
 
 // ---- Utilities ----
