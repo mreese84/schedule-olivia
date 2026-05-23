@@ -141,14 +141,21 @@ if (form) {
             });
 
             if (response.ok) {
+                // Track successful booking submission
+                gtag('event', 'submit_booking', {
+                    event_category: 'booking_flow',
+                    service_name: (document.getElementById('service') || {}).value || ''
+                });
                 form.reset();
                 msgSuccess.hidden = false;
                 msgSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
             } else {
+                gtag('event', 'booking_error', { event_category: 'booking_flow', error_type: 'server_error' });
                 msgError.hidden = false;
                 msgError.scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
         } catch (err) {
+            gtag('event', 'booking_error', { event_category: 'booking_flow', error_type: 'network_error' });
             msgError.hidden = false;
             msgError.scrollIntoView({ behavior: 'smooth', block: 'center' });
         } finally {
@@ -422,6 +429,13 @@ function previewDateRange(hoverDs) {
 }
 
 function onDayClick(ds) {
+    // Track date selection in Google Analytics
+    gtag('event', 'select_date', {
+        event_category: 'booking_flow',
+        service_name: cal.service,
+        selected_date: ds
+    });
+
     if (cal.service === 'Dog Walking') {
         cal.date = ds;
         cal.step = 'pick-time';
@@ -557,6 +571,13 @@ function previewTimeRange(ds, hoverKey) {
 }
 
 function onTimeClick(h, m, ds, mode) {
+    // Track time selection in Google Analytics
+    gtag('event', 'select_time', {
+        event_category: 'booking_flow',
+        service_name: cal.service,
+        selected_time: fmtTime12(h, m)
+    });
+
     if (cal.service === 'Dog Walking') {
         // single time pick
         cal.startTime = [h, m];
@@ -625,6 +646,12 @@ function showSummary(text) {
 }
 
 function unlockForm() {
+    // Track form unlock (availability complete) in Google Analytics
+    gtag('event', 'begin_booking', {
+        event_category: 'booking_flow',
+        service_name: cal.service
+    });
+
     var overlay = document.getElementById('form-lock-overlay');
     var bookingForm = document.getElementById('booking-form');
     if (overlay) overlay.hidden = true;
