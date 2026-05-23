@@ -226,6 +226,13 @@ var $legend    = document.getElementById('cal-legend');
 
 // ---- Service picker ----
 function selectService(svcName) {
+    // Track service selection in Google Analytics
+    gtag('event', 'select_service', {
+        event_category: 'engagement',
+        event_label: svcName,
+        service_name: svcName
+    });
+
     // highlight active picker button
     document.querySelectorAll('.svc-btn').forEach(function (b) { b.classList.remove('active'); });
     var matchBtn = document.querySelector('.svc-btn[data-svc="' + svcName + '"]');
