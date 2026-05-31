@@ -289,9 +289,11 @@ function showFormFields(svc) {
     var fgDw = document.getElementById('fg-dw');
     var fgPs = document.getElementById('fg-ps');
     var fgBs = document.getElementById('fg-bs');
+    var fgRecurring = document.getElementById('fg-recurring');
     if (fgDw) fgDw.hidden = true;
     if (fgPs) fgPs.hidden = true;
     if (fgBs) fgBs.hidden = true;
+    if (fgRecurring) fgRecurring.hidden = true;
     // disable hidden inputs so they aren't submitted
     [fgDw, fgPs, fgBs].forEach(function (g) {
         if (!g) return;
@@ -300,6 +302,11 @@ function showFormFields(svc) {
             inp.value = '';
         });
     });
+    // reset recurring section
+    var recurringCheck = document.getElementById('recurring-check');
+    var recurringDays  = document.getElementById('recurring-days');
+    if (recurringCheck) recurringCheck.checked = false;
+    if (recurringDays)  recurringDays.hidden = true;
 
     var target;
     if (svc === 'Dog Walking')                                  target = fgDw;
@@ -308,6 +315,10 @@ function showFormFields(svc) {
     if (target) {
         target.hidden = false;
         target.querySelectorAll('input').forEach(function (inp) { inp.required = true; });
+    }
+    // Show recurring option for Dog Walking and Pet Sitting
+    if ((svc === 'Dog Walking' || svc === 'Pet Sitting') && fgRecurring) {
+        fgRecurring.hidden = false;
     }
 }
 
@@ -779,4 +790,17 @@ if (svcSelect) {
     });
 }
 
-
+// ---- Recurring visits toggle ----
+var recurringCheck = document.getElementById('recurring-check');
+var recurringDays  = document.getElementById('recurring-days');
+if (recurringCheck && recurringDays) {
+    recurringCheck.addEventListener('change', function () {
+        recurringDays.hidden = !this.checked;
+        if (!this.checked) {
+            // uncheck all day checkboxes when recurring is unchecked
+            recurringDays.querySelectorAll('input[type="checkbox"]').forEach(function (cb) {
+                cb.checked = false;
+            });
+        }
+    });
+}

@@ -985,6 +985,72 @@ ul {
     text-decoration: underline;
 }
 
+/* ---------- Recurring Visits ---------- */
+.recurring-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+.recurring-checkbox-label input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--purple);
+    cursor: pointer;
+}
+
+.recurring-days {
+    margin-top: 12px;
+}
+
+.recurring-days-label {
+    font-weight: 700;
+    font-size: 0.88rem;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.recurring-days-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.day-chip {
+    cursor: pointer;
+}
+
+.day-chip input[type="checkbox"] {
+    display: none;
+}
+
+.day-chip span {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 2px solid var(--border);
+    border-radius: var(--radius-sm);
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: var(--text-mid);
+    background: var(--white);
+    transition: var(--transition);
+    user-select: none;
+}
+
+.day-chip input:checked + span {
+    background: var(--purple-pale);
+    border-color: var(--purple);
+    color: var(--purple);
+}
+
+.day-chip:hover span {
+    border-color: var(--purple-light);
+}
+
 /* ---------- Footer ---------- */
 .footer {
     background: var(--text-dark);
